@@ -14,7 +14,7 @@ def predict():
     Mengambil nilai close dan predict ke model
     '''
     close = request.form.values()
-    prediction = model.predict(close)
+    prediction = model.predict(close.astype('float'))
 
     return render_template('index.html', predict_close=prediction)
 
