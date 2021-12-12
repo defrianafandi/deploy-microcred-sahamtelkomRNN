@@ -17,10 +17,14 @@ def predict():
     '''
     Mengambil nilai close dan predict ke model
     '''
+    scaler = MinMaxScaler(feature_range=(0,1))
     close = request.form.values()
-    prediction = model.predict(float(close))
+    close = float(close)
+    x = scaler.fit_transform(np.array(close).reshape(-1,1))
+    prediction = model.predict(x)
+    hasil_predict = scaler.inverse_transform(prediction)
 
-    return render_template('index.html', predict_close=prediction)
+    return render_template('index.html', predict_close=hasil_predict)
 
 
 if __name__ == '__main__':
