@@ -1,9 +1,7 @@
-from flask import Flask, request, render_template
-from keras.models import load_model
+from flask import Flask, render_template, request
+from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
-import warnings
-warnings.filterwarnings('ignore')
 
 app = Flask(__name__)
 model = load_model('model.h5')
