@@ -23,6 +23,7 @@ def predict():
     x = scaler.fit_transform(np.array(close).reshape(-1,1))
     prediction = model.predict(x)
     hasil_predict = scaler.inverse_transform(prediction)
+    hasil_predict = hasil_predict[0,0]
 
     return render_template('index.html', predict_close=hasil_predict)
 
