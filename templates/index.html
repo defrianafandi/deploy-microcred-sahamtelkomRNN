@@ -10,21 +10,30 @@
         />
         <title>Aplikasi Prediksi Saham Telkom</title>
     </head>
-    <body
-        class="
-            flex flex-col
-            justify-between
-            item-center
-            p-8
-            min-h-screen
-            bg-gradient-to-r
-            from-green-400
-            to-blue-500
-            text-gray-800
-            md:flex-row
-        "
-    >
-        <main class="bg-white p-16 rounded-lg">
+    <body>
+        <header class="flex gap-x-8 justify-center items-center h-32 bg-green-300">
+            <img src="http://www.dikti.go.id/microcredential-ai/assets/1.png" alt="Logo" style="width:200px">
+            <img
+                class="h-16"
+                src="http://www.dikti.go.id/microcredential-ai/assets/kampus-merdeka.png"
+                alt=""
+            />
+            <img
+                class="h-16"
+                src="http://www.dikti.go.id/microcredential-ai/assets/2.png"
+                alt=""
+            />
+        </header>
+        <section
+            class="
+                flex
+                justify-center
+                items-center
+                w-screen
+                h-screen
+                bg-green-300
+            "
+        >
             <h1 class="text-3xl font-bold mb-8">
                 Masukkan Harga Saham Close:
             </h1>
@@ -83,19 +92,7 @@
                 <h1 class="text-2xl mb-8">
                     Prediksi Saham Sekarang adalah
                 </h1>
-                <h2 class="text-5xl font-bold">Rp { predict_close }</h2>
-            </div>
-            <div class="flex justify-around bg-white p-16 rounded-lg mt-8">
-                <img
-                    class="h-24 md:h-28"
-                    src="http://dikti.go.id/microcredential-ai/assets/1.png"
-                    alt="logo-dts"
-                />
-                <img
-                    class="h-24 md:h-28"
-                    src="http://dikti.go.id/microcredential-ai/assets/kampus-merdeka.png"
-                    alt="logo-kominfo"
-                />
+                <h2 class="text-5xl font-bold">Rp {{predict_close}}</h2>
             </div>
         </section>
     </body>
